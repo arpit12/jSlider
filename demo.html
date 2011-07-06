@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+
+<script src="jquery-1.6.2.min.js" type="text/javascript"></script>
+<script src="jquery.jSlider.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$('div#jSlider').jSlider({'interval':1500});
+	$('div#jSlider2').jSlider();
+});
+
+</script>
+
+<style type="text/css" media="screen">
+body {
+	font-family:'Droid Sans', Ariel;
+	font-size:16px;
+	color:#555555;
+	background:#efefef;
+	padding:80px;
+}
+
+a {
+	color:#555555;
+}
+
+a:hover {
+	color:#9f9f9f;
+	text-decoration:underline;
+}
+
+div#jSlider img, div#jSlider2 img { /* Hide all images in the begining */
+	display:none;
+}
+
+div#jSlider img#default, div#jSlider2 img#default { /* Show the default image */
+	display:inline-block;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+You can have multiple sideshows in a single page with different speeds.<br />
+Examples : <br /><br />
+1. $('div#jSlider').jSlider({'interval':1500}); for custom speed in milliseconds or <br /><br /><br />
+
+<div id=jSlider> <!-- Can be anything, just make sure the above css rules match with the name -->
+
+<img src='slides/1.png' >
+<img src='slides/2.png' >
+<img src='slides/3.png' >
+<img src='slides/4.png' >
+<img src='slides/5.png' >
+<img src='slides/6.png' >
+<img id='default' src='slides/7.png'>
+
+</div>
+
+<br /><br /><br />
+
+2. $('div#jSlider2').jSlider(); for the default speed 2000ms.<br /><br /><br />
+
+<div id=jSlider2> <!-- Can be anything, just make sure the above css rules match with the name -->
+
+<img src='slides/3.png' >
+<img src='slides/4.png' >
+<img src='slides/5.png' >
+<img src='slides/2.png' >
+<img src='slides/1.png' >
+<img src='slides/6.png' >
+<img id='default' src='slides/7.png'>
+
+</div>
+
+<br /><br /><br />
+
+Timing wont be very accurate when multiple sideshows are used. Blame JS and not me for it.<br />
+Enjoy the plugin, its superlight and &lt; 1KB. <br />
+Get the latest of this plugin <a href='http://www.jaseemabid.blogspot.com/'>here</a>
+
+
+
+</body>
+
+</html>

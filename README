@@ -1,0 +1,42 @@
+jSlider is a very simple slide show plug in written for jQuery.
+Setting up this slide show is fairly simple. A little familiarity with jQuery is assumed.
+
+Instructions.
+-------------
+
+1. Make a simple html page.
+
+2. Add jQuery library and the plug in file like this.
+	<script src="jquery-1.6.2.min.js" type="text/javascript"></script>
+	<script src="jquery.jSlider.js" type="text/javascript"></script>
+
+3. Add a div like this in the body section of your html code. choose your own id name if needed.
+
+	<div id=jSlider> <!-- Can be anything, just make sure to call plug in with the name -->
+		<img src='slides/1.png' >
+		<img src='slides/2.png' >
+		<img src='slides/3.png' >
+		<img src='slides/4.png' >
+		<img src='slides/5.png' >
+		<img src='slides/6.png' >
+		<img id='default' src='slides/7.png'>
+	</div>
+
+	Keep one image as default. Not the first one because that will cause an animation delay.
+
+4. Call the js function to activate the plug in.
+
+	$(document).ready(function(){
+		$('div#jSlider').jSlider({'interval':1500});
+	});
+
+
+You can have multiple sideshows in a single page with different speeds.
+Examples :
+
+1. $('div#jSlider').jSlider({'interval':1500}); for custom speed in milliseconds or
+2. $('div#jSlider2').jSlider(); for the default speed 2000ms.
+
+Timing wont be very accurate when multiple sideshows are used. Blame JS and not me for it.
+Enjoy the plugin, its super light and < 1KB.
+Get the latest of this plugin at https://github.com/jaseemabid/jSlider
